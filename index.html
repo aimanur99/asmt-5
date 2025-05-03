@@ -56,7 +56,7 @@
         <!-- Navbar start -->
         <nav class="flex justify-between items-center p-20 bg-base-200">
             <div>
-                <button class="btn btn-outline btn-blog items-center p-2"
+                <button id="btn-blog" class="btn btn-outline btn-blog items-center p-2"
                     style="background-color: #B4F461;">Blog</button>
             </div>
             <div class="flex items-center space-x-2">
@@ -65,7 +65,7 @@
             </div>
             <div class="flex items-center space-x-2">
                 <img src="assets/coin.png" alt="">
-                <span class="text-2xl font-bold">5500</span>
+                <span id="top-amount" class="text-2xl font-bold">5500</span>
                 <p class="text-2xl font-bold">BDT</p>
             </div>
         </nav>
@@ -74,24 +74,25 @@
 
         <!-- btn section -->
         <div class="flex justify-center space-x-2 mt-5 mb-5  py-4 ">
-            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-donation">Donation</button>
-            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-history">History</button>
+            <button id="donation-btn" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-donation">Donation</button>
+            <button id="history-btn" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg btn-history">History</button>
         </div>
         <!-- btn section end -->
     </header>
     <main>
-        <!-- noakhali section -->
-        <div class="hero mb-16 py-8">
-            <div class="hero-content flex-col lg:flex-row justify-center gap-x-4 w-11/12"> ">
+        <div id="donation-card">
+           <!-- noakhali section -->
+        <div id="noakhali-card" class="hero mb-16 py-8">
+            <div class="hero-content flex-col lg:flex-row justify-center gap-x-4 w-11/12">
                 <div class="border-2 border-gray-200 rounded-lg shadow-lg p-8 bg-white flex flex-col lg:flex-row justify-between items-center">
                     <div class="w-1/2">
 
                         <img src="assets/noakhali.png" alt="">
                     </div>
                     <div class="w-1/2">
-                        <div class="flex justify-center space-x-2 w-28 bg-slate-100 rounded-lg p-4">
+                        <div class="flex justify-center space-x-2 w-1/2 bg-slate-100 rounded-lg p-4">
                             <img src="assets/coin.png" alt="">
-                            <span>0</span>
+                            <span id="noakhali-amount">0</span>
                             <p>BDT</p>
                         </div>
                         <h3 class="text-2xl font-bold mt-4">Donate for Flood at Noakhali, Bangladesh</h3>
@@ -104,13 +105,16 @@
                         </p>
     
                         <div class="mt-4">
-                            <input type="text" class="input input-bordered w-full" placeholder="Write Donation Amount" />
+                            <input id="input-noakhali" type="text" class="input input-bordered w-full p-5" placeholder="Write Donation Amount" />
                         </div>
+                        <div>
+                            <p id="input2-error" class="hidden text-red-500">input error</p>
+                          </div>
                         <div>
                             <p></p>
                         </div>
                         <div class="mt-4">
-                            <button class="btn btn-block" style="background-color: #B4F461;">Donate Now</button>
+                            <button id="btn-noakhali" class="btn btn-block" style="background-color: #B4F461;">Donate Now</button>
     
                         </div>
                     </div>
@@ -119,7 +123,7 @@
             </div>
         </div>
         <!-- feni section -->
-        <div class="hero mb-16 py-8">
+        <div id="feni-card" class="hero mb-16 py-8">
             <div class="hero-content flex-col lg:flex-row justify-between gap-x-4 w-11/12">
 
                 <div class="border-2 border-gray-200 rounded-lg shadow-lg p-8 bg-white flex flex-col lg:flex-row justify-between items-center">
@@ -127,9 +131,9 @@
                         <img src="assets/feni.png" alt="">
                     </div>
                     <div class="w-1/2">
-                        <div class="flex justify-center w-28 bg-slate-100 rounded-lg p-4">
+                        <div class="flex justify-center w-1/2 bg-slate-100 rounded-lg p-4">
                             <img src="assets/coin.png" alt="">
-                            <span>0</span>
+                            <span id="feni-amount">0</span>
                             <p>BDT</p>
                         </div>
                         <h3 class="text-2xl font-bold mt-4">Donate for Flood at Feni, Bangladesh</h3>
@@ -142,10 +146,13 @@
                         </p>
     
                         <div class="mt-4">
-                            <input type="text" class="input input-bordered w-full" placeholder="Write Donation Amount" />
+                            <input id="input-feni" type="text" class="input input-bordered w-full p-5" placeholder="Write Donation Amount" />
                         </div>
+                        <div>
+                            <p id="input2-error" class="hidden text-red-500">input error</p>
+                          </div>
                         <div class="mt-4">
-                            <button class="btn btn-block" style="background-color: #B4F461;"> Donate Now</button>
+                            <button id="btn-feni" class="btn btn-block" style="background-color: #B4F461;"> Donate Now</button>
     
                         </div>
                     </div>
@@ -154,7 +161,7 @@
             </div>
         </div>
         <!-- quota section -->
-        <div class="hero mb-16 py-8">
+        <div id="quota-card" class="hero mb-16 py-8">
             <div class="hero-content flex-col lg:flex-row justify-between gap-x-4 w-11/12">
 
                 <div class="border-2 border-gray-200 rounded-lg shadow-lg p-8 bg-white flex flex-col lg:flex-row justify-between items-center">
@@ -163,9 +170,9 @@
                         <img src="assets/quota-protest.png" alt="">
                     </div>
                     <div class="w-1/2">
-                        <div class="flex justify-center w-28 bg-slate-100 rounded-lg p-4">
+                        <div class="flex justify-center w-1/2 bg-slate-100 rounded-lg p-4">
                             <img src="assets/coin.png" alt="">
-                            <span>0</span>
+                            <span id="quota-amount">0</span>
                             <p>BDT</p>
                         </div>
                         <h3 class="text-2xl font-bold mt-4">Aid for Injured in the Quota Movement</h3>
@@ -179,20 +186,41 @@
                         </p>
     
                         <div class="mt-4">
-                            <input type="text" class="input input-bordered w-full" placeholder="Write Donation Amount" />
+                            <input id="input-quota" type="text" class="input input-bordered w-full p-5" placeholder="Write Donation Amount" />
                         </div>
+                        <div>
+                            <p id="input2-error" class="hidden text-red-500">input error</p>
+                          </div>
                         <div class="mt-4">
-                            <button class="btn btn-block" style="background-color: #B4F461;">Donate Now</button>
+                            <button id="btn-quota" class="btn btn-block" style="background-color: #B4F461;">Donate Now</button>
     
                         </div>
                     </div>
                 </div>
                 
             </div>
+        </div> 
         </div>
+        
+
+        <!-- Add history section -->
+         <!-- added the history section here -->
+    <div id="history-card" class=" hidden">
+        <div id="noakhali-history" class="border mx-10 p-4 text-center">
+        </div>
+        <br>
+        <div id="feni-history" class="border mx-10 p-4 text-center">
+        </div>
+        <br>
+        <div id="quota-history" class="border mx-10 p-4 text-center">
+        </div>
+      </div>
     </main>
     <footer></footer>
+    <script src="js code/history.js"></script>
     <script src="js code/donation.js"></script>
+    <script src="js code/function.js"></script>
+    <!-- <script src="js code/home.js"></script> -->
 </body>
 
 </html>
